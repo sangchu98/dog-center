@@ -1,0 +1,610 @@
+/* style2.css */
+:root {
+    --main-color: #EF5797;
+    --sub-color: #1876AB;
+    --text-color:#333333;
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    font-family:'Noto Sans KR', sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  a:hover{
+    color: var(--sub-color);
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+
+  /* 헤더 */
+  #header{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: 135px;
+  }
+  #header img{
+  width: 247px;
+  height: 75px;
+  margin-top: 30px;
+  margin-left: 10px;
+  }
+  
+  .header-first-nav{
+  display: flex;
+  font-size: 16px;
+  color: #707070;
+  margin-top: 10px;
+  justify-content: flex-end;
+  }
+  .header-first-nav li{
+  margin-right: 30px;
+  }
+  .header-first-nav li:last-child{
+  margin: 0;
+  }
+  
+  .header-second-nav{
+  display: flex;
+  color: #333333;
+  font-weight: 600;
+  margin-top: 30px;
+  justify-content: flex-end;
+  }
+  .header-second-nav li{
+  font-size: 22px;
+  text-align: center;
+  width: 150px;
+  }
+  .header-second-nav li a{
+  width: 150px;
+  }
+  .header-second-nav li:last-child{
+  margin: 0;
+  }
+  .header-second-nav-depth{
+  position: relative;
+  margin-top: 38px;
+  background: #1876AB;
+  padding: 10px 0;
+  z-index: 100;
+  display: none;
+  }
+  .header-second-nav-depth li a:hover{
+  background: #60c5ff;
+  }
+  .header-second-nav-depth li{
+  font-size: 18px;
+  margin: 0;
+  text-align: center;
+  font-weight: 300;
+  
+  }
+  .header-second-nav-depth li a{
+  display: block;
+  padding: 6px 0;
+  color: white;
+  }
+  
+  /* 메인 배너 */
+  .main-visual{
+    width: 1920px;
+    height: 345px;
+    background: url(../images/sub-banner1.png);
+    margin: 0 auto;
+  }
+  .main-visual h2{
+    text-align: center;
+    color: white;
+    line-height: 345px;
+    font-size: 50px;
+  }
+
+  /* content */
+  .adopt-box{
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .introduce{
+    width: 1200px;
+    margin-top: 60px;
+    position: relative;
+  }
+  .introduce-nav{
+    display: flex;
+  }
+  .introduce-nav li{
+    width: 400px;
+    height: 58px;
+    font-size: 26px;
+    border: 1px solid #dddddd;
+    text-align: center;
+    line-height: 58px;
+  }
+  
+  .introduce-nav li:nth-child(2) {
+    background-color: var(--sub-color);
+  }
+  .white{
+    color: white;
+  }
+
+  .introduce h2{
+    margin-top: 40px;
+    margin-left: 95px;
+    font-size: 36px;
+    color: var(--main-color);
+    font-weight: 700;
+  }
+
+  .dog-img{
+    width: 100%;
+    height: 136px;
+    background: url(../images/dog-bar-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 70px;
+  }
+
+  .protect-menu {
+      display: flex;
+      margin-top: 102px; 
+      margin-bottom: 74px;
+      text-align: center;
+      font-size: 26px;
+      padding-left: 26px; 
+      padding-right: 26px; 
+      justify-content: space-between;
+  }
+
+  .protect-box {
+      width: 1200px;
+      margin: 0 auto;
+  }
+  #box1 {
+    width: 1200px;
+    height: 320px;
+    display: flex; 
+    margin-bottom: 40px;
+  }
+
+  .protect-1 {
+    border: 1px solid #ddd;
+    width: 270px;
+    height: 320px;
+    margin-left: 15px;
+  }
+
+  .protect-1-img {
+    width: 258px;
+    height: 238px;
+    background: url(../images/sub-poodle1.jpg);
+    margin: 6px auto;
+  }
+
+  .adopt-box .text-1 {
+    font-size: 14px;
+    text-align: left;
+    margin-left: 12px;
+  }
+
+  .protect-2 {
+    border: 1px solid #ddd;
+    width: 270px;
+    height: 320px;
+    margin-left: 30px;
+  }
+
+  .protect-2-img {
+    width: 258px;
+    height: 238px;
+    background: url(../images/sub-shiba2.jpg);
+    margin: 6px auto;
+  }
+
+  .adopt-box .text-2 {
+    font-size: 14px;
+    text-align: left;
+    margin-left: 12px;
+  }
+
+  .protect-3 {
+    border: 1px solid #ddd;
+    width: 270px;
+    height: 320px;
+    margin-left: 30px;
+  }
+
+  .protect-3-img {
+    width: 258px;
+    height: 238px;
+    background: url(../images/sub-husky3.jpg);
+    margin: 6px auto;
+  }
+
+  .adopt-box .text-3 {
+    font-size: 14px;
+    text-align: left;
+    margin-left: 12px;
+  }
+
+  .protect-4 {
+    border: 1px solid #ddd;
+    width: 270px;
+    height: 320px;
+    margin-left: 30px;
+  }
+
+  .protect-4-img {
+    width: 258px;
+    height: 238px;
+    background: url(../images/sub-poodle4.jpg);
+    margin: 6px auto;
+  }
+
+  .adopt-box .text-4 {
+    font-size: 14px;
+    text-align: left;
+    margin-left: 12px;
+  }
+
+  #box2 {
+    width: 1200px;
+    height: 320px;
+    display: flex; 
+    margin-bottom: 40px;
+  }
+
+  .protect-5 {
+    border: 1px solid #ddd;
+    width: 270px;
+    height: 320px;
+    margin-left: 15px;
+  }
+
+  .protect-5-img {
+    width: 258px;
+    height: 238px;
+    background: url(../images/sub-mix5.jpg);
+    margin: 6px auto;
+  }
+
+  .adopt-box .text-5 {
+    font-size: 14px;
+    text-align: left;
+    margin-left: 12px;
+  }
+
+  .protect-6 {
+    border: 1px solid #ddd;
+    width: 270px;
+    height: 320px;
+    margin-left: 30px;
+  }
+
+  .protect-6-img {
+    width: 258px;
+    height: 238px;
+    background: url(../images/sub-dachs6.jpg);
+    margin: 6px auto;
+  }
+
+  .adopt-box .text-6 {
+    font-size: 14px;
+    text-align: left;
+    margin-left: 12px;
+  }
+
+  .protect-7 {
+    border: 1px solid #ddd;
+    width: 270px;
+    height: 320px;
+    margin-left: 30px;
+  }
+
+  .protect-7-img {
+    width: 258px;
+    height: 238px;
+    background: url(../images/sub-jindo7.jpg);
+    margin: 6px auto; 
+  }
+
+  .adopt-box .text-7 {
+    font-size: 14px;
+    text-align: left;
+    margin-left: 12px;
+  }
+
+  .protect-8 {
+    border: 1px solid #ddd;
+    width: 270px;
+    height: 320px;
+    margin-left: 30px;
+  }
+
+  .protect-8-img {
+    width: 258px;
+    height: 238px;
+    background: url(../images/sub-maltese8.jpg);
+    margin: 6px auto;
+  }
+
+  .adopt-box .text-8 {
+    font-size: 14px;
+    text-align: left;
+    margin-left: 12px;
+  }
+
+  #box3 {
+    width: 1200px;
+    height: 320px;
+    display: flex; 
+    margin-bottom: 119px;
+  }
+
+  .protect-9 {
+    border: 1px solid #ddd;
+    width: 270px;
+    height: 320px;
+    margin-left: 15px;
+  }
+
+  .protect-9-img {
+    width: 258px;
+    height: 238px;
+    background: url(../images/sub-pome9.jpg);
+    margin: 6px auto;
+  }
+
+  .adopt-box .text-9 {
+    font-size: 14px;
+    text-align: left;
+    margin-left: 12px;
+  }
+
+  .protect-10 {
+    border: 1px solid #ddd;
+    width: 270px;
+    height: 320px;
+    margin-left: 30px;
+  }
+
+  .protect-10-img {
+    width: 258px;
+    height: 238px;
+    background: url(../images/sub-shiba10.jpg);
+    margin: 6px auto;
+  }
+
+  .adopt-box .text-10 {
+    font-size: 14px;
+    text-align: left;
+    margin-left: 12px;
+  }
+
+  .protect-11 {
+    border: 1px solid #ddd;
+    width: 270px;
+    height: 320px;
+    margin-left: 30px;
+  }
+
+  .protect-11-img {
+    width: 258px;
+    height: 238px;
+    background: url(../images/sub-mix11.jpg);
+    margin: 6px auto;
+  }
+
+  .adopt-box .text-11 {
+    font-size: 14px;
+    text-align: left;
+    margin-left: 12px;
+  }
+
+  .protect-12 {
+    border: 1px solid #ddd;
+    width: 270px;
+    height: 320px;
+    margin-left: 30px;
+  }
+
+  .protect-12-img {
+    width: 258px;
+    height: 238px;
+    background: url(../images/sub-jindo12.jpg);
+    margin: 6px auto;
+  }
+
+  .adopt-box .text-12 {
+    font-size: 14px;
+    text-align: left;
+    margin-left: 12px;
+  }
+
+  ul{
+    list-style: none;
+    display: inline-block;
+  }
+
+  li{
+    display: inline-block;
+  }
+
+  .pagebtn{
+    text-align: center;
+    width: 1200px;
+    font-size: 30px;
+    margin: 0 auto;
+  }
+
+  .blue {
+    color: var(--sub-color);
+  }
+  
+  .pagebtn li{
+    margin-right: 52px;
+  }
+  
+  .pagebtn li:last-child{
+    margin: 0;
+
+  }
+  
+
+  .search-box{
+    position: relative;
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    width: 1200px;
+    justify-content: center;
+    margin-top: 62px;
+  }
+  input {
+    border: 1px solid #ddd;
+    width: 400px;
+    height: 72px;
+    border-radius: 10px;
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  button {
+    width: 100px;
+    height: 72px;
+    background: var(--sub-color);
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    border-radius: 10px;
+    top:60px;
+  }
+
+/* footer */
+  footer{
+    margin-top: 120px;
+    background-color: #dddddd;
+    height: 180px;
+  }
+  footer .footer-logo{
+    width: 202px;
+    height: 56px;
+    margin-top: 43px;
+  }
+  .footer-box{
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .footer-box-ul{
+    display: flex;
+  }
+  
+  .footer-box-ul li{
+    padding: 0 28px;
+    border-right: 1px solid #777777;
+  }
+  
+  .footer-box-ul li:first-child{
+    padding-left: 0;
+  }
+  .footer-box-ul li:last-child{
+    border-right: none;
+  }
+  .footer-box-ul li a{
+    color: #777777;
+  }
+  .footer-box-flex{
+    margin-top: 43px;
+    margin-left: 49px;
+    color: #777777;
+  }
+  .footer-box-p{
+    margin-top: 6px;
+  }
+  .footer-box-p p:last-child{
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .icon{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .icon img{
+    width: 42px;
+    height: 42px;
+    margin-left: 22px;
+  }
+
+  .protect-1:hover {
+    box-shadow: 8px 8px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  
+  .protect-2:hover {
+    box-shadow: 8px 8px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  
+  .protect-3:hover {
+    box-shadow: 8px 8px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  
+  .protect-4:hover {
+    box-shadow: 8px 8px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  .protect-5:hover {
+    box-shadow: 8px 8px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  
+  .protect-6:hover {
+    box-shadow: 8px 8px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  .protect-7:hover {
+    box-shadow: 8px 8px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  
+  .protect-8:hover {
+    box-shadow: 8px 8px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  .protect-9:hover {
+    box-shadow: 8px 8px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  
+  .protect-10:hover {
+    box-shadow: 8px 8px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  .protect-11:hover {
+    box-shadow: 8px 8px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  
+  .protect-12:hover {
+    box-shadow: 8px 8px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+
+
+  

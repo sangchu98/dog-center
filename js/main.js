@@ -13,3 +13,19 @@ $(function(){
      },3000)
     
 })
+
+$(function(){
+    $('.header-second-nav > li').hover(
+        function(){
+            $(this).find('.header-second-nav-depth')
+            .stop()
+            .slideDown();
+        },
+        function(){
+            $(this).find('.header-second-nav-depth')
+            .stop()
+            .slideUp();
+        }
+    );
+})
+

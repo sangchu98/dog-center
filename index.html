@@ -12,56 +12,115 @@
   <!-- 제이쿼리 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- 자바스크립트 -->
-  <script src="js/main.js"></script>
+  <script src="./js/main.js"></script>
+  <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </head>
 <body>
     <header id="header">
-        <h1><a href="#"><img src="images/logo.png" alt="서울동물사랑센터 로고"></a>
+        <h1><a href="./index.html"><img src="images/logo.png" alt="서울동물사랑센터 로고"></a>
         </h1>
         <div class="header-box">
             <ul class="header-first-nav">
-                <li><a href="#">홈</a></li>
+                <li><a href="./index.html">홈</a></li>
                 <li><a href="#">로그인</a></li>
                 <li><a href="#">사이트맵</a></li>
                 <li><a href="#">공지사항</a></li>
             </ul>
             <ul class="header-second-nav">
-                <li><a href="#">센터소개</a></li>
-                <li><a href="#">입양</a></li>
-                <li><a href="#">자원봉사</a></li>
-                <li><a href="#">커뮤니티</a></li>
-                <li><a href="#">교육</a></li>
+                <li><a href="./introduce/introduce.html">센터소개</a>
+                    <ul class="header-second-nav-depth">
+                        <li><a href="./introduce/introduce.html">소개</a></li>
+                        <li><a href="./introduce/introduce_2.html">둘러보기</a></li>
+                        <li><a href="./introduce/introduce_3.html">오시는길</a></li>
+                    </ul>
+                </li>
+                <li><a href="../adopt/adopt-1.html">입양</a>
+                    <ul class="header-second-nav-depth">
+                        <li><a href="./adopt/adopt-1.html">입양절차</a></li>
+                        <li><a href="./adopt/adopt-2.html">보호중인동물</a></li>
+                        <li><a href="./adopt/adopt-3.html">입양 후 소식</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">자원봉사</a>
+                    <ul class="header-second-nav-depth">
+                        <li><a href="#">안내</a></li>
+                        <li><a href="#">신청</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">커뮤니티</a>
+                    <ul class="header-second-nav-depth">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">갤러리</a></li>
+                        <li><a href="#">뉴스레터</a></li>
+                        <li><a href="#">FQA</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">교육</a>
+                    <ul class="header-second-nav-depth">
+                        <li><a href="#">온라인교육영상</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </header>
-    <section id="main-visual">
-        <div class="slider">
-            <div class="sliders">
-                <img src="images/main-banner1.jpg" alt="1">
-                <img src="images/main-banner2.jpg" alt="2">
-                <img src="images/main-banner3.jpg" alt="3">
-            </div>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./images/main-banner1.jpg" alt="1"></div>
+          <div class="swiper-slide"><img src="./images/main-banner2.jpg" alt="1"></div>
+          <div class="swiper-slide"><img src="./images/main-banner3.jpg" alt="1"></div>
         </div>
-      </section>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
 
       <section id="contents-1">
           <h2>보호중인동물</h2>
           <div class="contents-box container">
+            <a href="./adopt/adopt-2.html"><span>더보기></span></a>
               <div class="contents1">
                   <img src="images/contents-img1.jpg" alt="1">
                   <div class="text-box">
-                
+                      <div class="dog-info">
+                          <a href="#"><span>견종 : 진돗개</span></a>
+                          <a href="#"><span>나이 : 1세추정</span></a>
+                      </div>
+                      <div class="dog-info">
+                        <a href="#"><span>성별 : 수컷</span></a>
+                        <a href="#"><span>중성화 : O</span></a>
+                    </div>
                   </div>
               </div>
               <div class="contents1">
                 <img src="images/contents-img2.jpg" alt="2">
                 <div class="text-box">
+                    <div class="dog-info">
+                        <a href="#"><span>견종 : 진돗개</span></a>
+                        <a href="#"><span>나이 : 1세추정</span></a>
+                    </div>
+                    <div class="dog-info">
+                      <a href="#"><span>성별 : 수컷</span></a>
+                      <a href="#"><span>중성화 : O</span></a>
+                  </div>
                     
                 </div>
             </div>
             <div class="contents1">
                 <img src="images/contents-img3.jpg" alt="3">
                 <div class="text-box">
+                    <div class="dog-info">
+                        <a href="#"><span>견종 : 진돗개</span></a>
+                        <a href="#"><span>나이 : 1세추정</span></a>
+                    </div>
+                    <div class="dog-info">
+                      <a href="#"><span>성별 : 수컷</span></a>
+                      <a href="#"><span>중성화: O</span></a>
+                  </div>
                     
                 </div>
             </div>
@@ -78,8 +137,8 @@
                   </p>
                   <img src="images/dog4.png" alt="dogimg1">
                   <div class="contents2-1-button">
-                      <button class="button1"><img src="images/icon01.png" alt="1">입양가능동물</button>
-                      <button class="button2"><img src="images/icon02.png" alt="2">입양절차안내</button>
+                      <a href="./adopt/adopt-2.html"><button class="button1"><img src="images/icon01.png" alt="1">입양가능동물</button></a>
+                      <a href="./adopt/adopt-1.html"><button class="button2"><img src="images/icon02.png" alt="2">입양절차안내</button></a>
                   </div>
               </div>
           </div>
@@ -137,11 +196,12 @@
       
       <section id="contents-3" class="container">
           <h2>입양 후 소식</h2>
-          <a href="#" class="more">더보기 ></a>
+          <a href="./adopt/adopt-3.html"><span>더보기></span></a> 
           <div class="indicator">
                 <div class="indicator-box">
                     <div class="borderline"></div>
-                    <ul>
+                    
+                    <ul class="circle">
                         <li><a href="#"></a></li>
                         <li><a href="#"></a></li>
                         <li><a href="#"></a></li>
@@ -149,10 +209,30 @@
                         <li><a href="#"></a></li>
                         <li><a href="#"></a></li>                 
                     </ul>
-                    
+                    <ul class="dog-name">
+                        <li><a href="#">퐁당이</a></li>
+                        <li><a href="#">토토</a></li>
+                        <li><a href="#">까미</a></li>
+                        <li><a href="#">신한</a></li>
+                        <li><a href="#">겨울</a></li>
+                        <li><a href="#">봉순</a></li>                 
+                    </ul>
                     </div>
                 </div>
                 
+          </div>
+          <div class="contents3">
+              <img src="images/content3-img1.jpg" alt="c3img1">
+              <img src="images/content3-img2.jpg" alt="c3img2">
+              <img src="images/content3-img3.jpg" alt="c3img3">
+              <img src="images/content3-img4.jpg" alt="c3img4">
+          </div>
+          <div class="review-box">
+              <h3>퐁당이</h3><br>
+              <div class="writer"><p>글쓴이 : 신혜인</p><p>작성일 : 2021.07.31</p><p>조회 223회</p></div><br>
+              <p>오늘 퐁당이 머리깎은 날이었습니다!
+                그런데 눈물이 많이 줄은 것 같아서 소식전하려고 글씁니다!(사진은 머리깎고 목욕 후 약간 삐져있는 듯한 모습이에요ㅎ)
+                삐삐도 피부병있는 친구라 퐁당이도 삐삐가 먹는 사료 먹고 있는데 사료효과인지 정확히는 모르겠지만 조금씩 나아지고 있는 것 같아 기쁩니당</p>
           </div>
       </section>
 
@@ -160,24 +240,37 @@
           <div class="contents4-1">
               <h2>공지사항</h2>
               <div class="notice-box">
-                  <h3>등록동물 미완료 집중단속 안내</h3>
-                  <div class="notice-text">
-                      <a href="#">등록동물 미완료 집중단속 안내</a>
-                      <a href="#">2021.09.21</a>
-                  </div>
-                  <div class="notice-text">
-                    <a href="#">등록동물 미완료 집중단속 안내</a>
-                    <a href="#">2021.09.20</a>
-                </div>
-                <div class="notice-text">
-                    <a href="#">등록동물 미완료 집중단속 안내</a>
-                    <a href="#">2021.09.19</a>
-                </div>
-                <div class="notice-text">
-                    <a href="#">등록동물 미완료 집중단속 안내</a>
-                    <a href="#">2021.09.18</a>
-                </div>
-
+                  <ul>
+                      <li>
+                          <a href="#">
+                          <h3>동물등록 미등록 집중단속 안내</h3>
+                      </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            동물등록 미완료 집중단속 안내
+                            <span>2021.10.01</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            서울시 유기견 안심보험 안내
+                            <span>2021.09.08</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            서리풀 무지개 모임(펫로스모임)안내
+                            <span>2021.09.02</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            추석연휴 돌봄쉼터 안내
+                            <span>2021.09.02</span>
+                        </a>
+                    </li>
+                  </ul>
               </div>
               <div class="guide-box">
                   <p>이용시간 및 문의전화</p>
@@ -192,8 +285,8 @@
               <h2>오시는길</h2>
               <div class="map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.33855707436!2d127.03593541558656!3d37.47633633704579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca10b5d836675%3A0x1bbfbc48b01835de!2z7ISc7LSIIOuPmeusvOyCrOuekeyEvO2EsA!5e0!3m2!1sko!2skr!4v1635246978576!5m2!1sko!2skr" 
-                width="585" 
-                height="450" 
+                width="590" 
+                height="400" 
                 style="border:0;" 
                 allowfullscreen="" loading="lazy">
                 </iframe>
@@ -220,36 +313,51 @@
                         <img src="images/guide-icon4.png" alt="">
                         <p>양재시민의 숲 공영주차장 이용 (유료)</p>
                     </div> 
-
               </div>
           </div>
       </section>
-
       <footer>
         <div class="footer-box">
-            <a href="#">
-                <img class="footer-logo" src="images/footer_logo.png" alt="푸터로고">
-            </a>
-            <div class="footer-box-flex">
-                <ul class="footer-box-ul">
-                    <li><a href="#">센터소개</a></li>
-                    <li><a href="#">개인정보취급방침</a></li>
-                    <li><a href="#">찾아오시는길</a></li>
-                    <li><a href="#">동물보호정책</a></li>
-                </ul>
-                <div class="footer-box-p">
-                    <p>주소 : 서울 서초구 양재천로19길 22   전화번호 : 02-6956-7981   입양문의 : 02-6956-7982~3
-                    </p>
-                    <p>Copyright &copy; 2019. 서초동물사랑센터. All rights reserved.</p>
+                <a href="../index/index.html">
+                    <img class="footer-logo" src="images/footer_logo.png" alt="푸터로고">
+                </a>
+                <div class="footer-box-flex">
+                    <ul class="footer-box-ul">
+                        <li><a href="./introduce/introduce.html">센터소개</a></li>
+                        <li><a href="#">개인정보취급방침</a></li>
+                        <li><a href="./introduce/introduce_3.html">찾아오시는길</a></li>
+                        <li><a href="#">동물보호정책</a></li>
+                    </ul>
+                    <div class="footer-box-p">
+                        <p>주소 : 서울 서초구 양재천로19길 22   전화번호 : 02-6956-7981   입양문의 : 02-6956-7982~3
+                        </p>
+                        <p>Copyright &copy; 2019. 서초동물사랑센터. All rights reserved.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="icon">
-            <a href="#"><img src="images/face-book.png" alt="페이스북"></a>
-            <a href="#"><img src="images/instagram.png" alt="인스타그램"></a>
-            <a href="#"><img src="images/band.png" alt="네이버밴드"></a>
-        </div>
-    </footer>
-    
+            <div class="icon">
+                <a href="#"><img src="images/face-book.png" alt="페이스북"></a>
+                <a href="#"><img src="images/instagram.png" alt="인스타그램"></a>
+                <a href="#"><img src="images/band.png" alt="네이버밴드"></a>
+            </div>
+        </footer>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+              spaceBetween: 30,
+              centeredSlides: true,
+              autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+              },
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+            });
+          </script>
 </body>
 </html>

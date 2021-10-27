@@ -36,66 +36,119 @@ body {
     margin: 0 auto;
 }
 
-/*헤더*/
+/* 헤더 */
 #header{
     width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     height: 135px;
-}
-#header img{
+  }
+  #header img{
   width: 247px;
   height: 75px;
   margin-top: 30px;
   margin-left: 10px;
-}
-
-.header-first-nav{
+  }
+  
+  .header-first-nav{
   display: flex;
   font-size: 16px;
   color: #707070;
   margin-top: 10px;
   justify-content: flex-end;
-}
-.header-first-nav li{
+  }
+  .header-first-nav li{
   margin-right: 30px;
-}
-.header-first-nav li:last-child{
+  }
+  .header-first-nav li:last-child{
   margin: 0;
-}
+  }
 
-.header-second-nav{
+  .header-second-nav{
   display: flex;
-  font-size: 22px;
   color: #333333;
   font-weight: 600;
   margin-top: 30px;
   justify-content: flex-end;
-}
-.header-second-nav li{
-  margin-right: 50px;
-}
-.header-second-nav li:last-child{
+  }
+  .header-second-nav li{
+  font-size: 22px;
+  text-align: center;
+  width: 150px;
+  }
+  .header-second-nav li a{
+  width: 150px;
+  }
+  .header-second-nav li:last-child{
   margin: 0;
-}
+  }
+  .header-second-nav-depth{
+  position: relative;
+  margin-top: 38px;
+  background: #1876AB;
+  padding: 10px 0;
+  z-index: 100;
+  display: none;
+  }
+  .header-second-nav-depth li a:hover{
+  background: #60c5ff;
+  }
+  .header-second-nav-depth li{
+  font-size: 18px;
+  margin: 0;
+  text-align: center;
+  font-weight: 300;
+  
+  }
+  .header-second-nav-depth li a{
+  display: block;
+  padding: 6px 0;
+  color: white;
+  }
+  /* 헤더 끝 */
 
 /*메인 슬라이더*/
-
-.slider {
-    overflow: hidden;
+.swiper {
     position: relative;
-}
-.slider .sliders {
-    width: 300%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
-    margin-left: -000%;
-    transition-duration: 1s;
-}
-.slider .sliders img{
-    width:33.33%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
     display: block;
-}
+    width: 1920px;
+    height: 600px;
+    object-fit: cover;
+  }
+  .swiper-button-next{
+    color: rgb(109, 109, 109);
+  }
+  .swiper-button-prev{
+    color: rgb(109, 109, 109);
+  }
+  .swiper-pagination{
+    position: absolute;
+    bottom: 10px;
+  }
 
 /*컨텐츠 1*/
 #contents-1{
@@ -109,10 +162,12 @@ body {
 #contents-1 .contents-box{
     width: 1200px;
     height: 540px;
+    position: relative;
     background: #F9BCD5;
     border-radius: 30px;
     display: flex;
     overflow: hidden;
+    justify-content: center;
 }
 
 #contents-1 .contents-box .contents1{
@@ -120,10 +175,20 @@ body {
     width: 334px;
     height: 438px;
     border-radius: 30px;
-    margin-left: 39px;
-    outline: 1px solid red;
     margin-top: 70px;
+}
+
+#contents-1 .contents-box .contents1:hover{
     box-shadow: 8px 8px 5px rgba(0,0,0,0.2);;
+}
+
+#contents-1 .contents-box > a > span{
+    position: absolute;
+    right: 50px;
+    top:20px;
+    font-size: 24px;
+    font-weight: bold;
+    color:#fff;
 }
 
 #contents-1 .contents-box .contents1:first-child{
@@ -139,7 +204,32 @@ body {
 #contents-1 .contents-box .contents1 .text-box{
     display: flex;
     margin-left: 50px;
+    width: 265px;
+    position: relative;
 }
+
+.contents1 .text-box .dog-info{
+    display: block;
+    position: relative;
+    margin-top: 40px;
+}
+
+.contents1 .text-box .dog-info:last-child{
+    position: absolute;
+    right: 30px;
+}
+.contents1 .text-box .dog-info a{
+    display: flex;
+    margin-top: 10px;
+}
+
+.contents1{
+    margin-right: 39px;
+}
+.contents1:last-child{
+    margin: 0;
+}
+
 
 /*컨텐츠 2*/
 #contents-2{
@@ -298,10 +388,20 @@ body {
 
 #contents-3{
     margin-top: 150px;
+    position: relative;
 }
 
 #contents-3 h2{
     text-align: center;
+    margin-bottom: 70px;
+}
+#contents-3 > a > span{
+    position: absolute;
+    right: 0;
+    top:60px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0068A3;
 }
 
 
@@ -321,22 +421,35 @@ body {
     left: -10px;
 }
 
-.indicator-box > ul > li{
-    display: inline-block;
-    margin-left: 150px;
-    
+.indicator-box > .circle{
+    z-index: 100;
 }
-.indicator-box > ul > li > a{
+.indicator-box > .circle > li{
+    display: inline-block;
+    margin-left: 150px;  
+}
+.indicator-box > .dog-name{
+    margin-left: 3px;
+}
+
+.indicator-box > .dog-name > li{
+    display: inline-block;
+    margin-left: 148px;
+}
+.indicator-box .circle > li > a{
     width: 28px;
     height: 28px;
     border-radius: 50%;
     background: #fff;
     border:4px solid #0068A3;
     display: flex;
-
+    cursor: pointer;
+}
+.indicator-box .circle > li > a:hover{
+    background-color: var(--sub-color);
 }
 
-.indicator-box > ul > li:first-child a{
+.indicator-box > .circle > li:first-child a{
     background: #0068ac;
 }
 
@@ -352,12 +465,65 @@ body {
 
 }
 
-.indicator > ul > li{
-    margin-left: 150px;
+.indicator .circle > li{
+    justify-content: space-between;
 }
 
+.indicator .dog-name{
+    position: relative;
+}
 
+.indicator .dog-name > li{
+    margin-right: 30px;
+}
 
+.indicator .dog-name > li a{
+    font-size: 14px;
+    position: absolute;
+    margin-top: 10px;
+}
+
+#contents-3 .contents3{
+    margin-top: 70px;
+    justify-content: space-between;
+}
+
+#contents-3 .contents3 img{
+    width: 260px;
+    height: 300px;
+    justify-content: space-between;
+    margin-right: 35px;
+}
+
+#contents-3 .contents3 img:last-child{
+    margin-right: none;
+}
+
+#contents-3 .review-box{
+    margin-top: 45px;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+
+#contents-3 .review-box h3{
+    margin-top: 40px;
+    font-size: 24px;
+    color: #0068A3;
+}
+
+#contents-3 .review-box p{ 
+    font-size: 12px;
+    font-weight: bold;
+}
+#contents-3 .review-box > p:last-child{
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: 400;
+    white-space:pre-line;
+}
+#contents-3 .review-box h3,.review-box p {
+    margin-left: 70px;
+}
 
 /*컨텐츠 4*/
 #contents-4 {
@@ -374,41 +540,66 @@ body {
 /*노티스박스*/
 
 #contents-4 .notice-box{
-    width: 585px;
-    height: 300px;
+    width: 590px;
+    height: 250px;
     border: 1px solid #dddddd;
 }
 
-#contents-4 .notice-box h3{
-    margin-top: 30px;
-    margin-left: 40px;
-    font-size: 20px;
-    margin-bottom: 40px;
+.contents4-1 .notice-box ul{
+    margin-left: 25px;
+    margin-top: 15px;
 }
 
-#contents-4 .notice-box .notice-text{
-    margin-left: 40px;
-    font-size: 18px;
-    margin-bottom: 20px;
+.contents4-1 .notice-box ul li h3{
+    font-size: 26px;
+    margin-bottom: 30px;
 }
 
-#contents-4 .notice-box .notice-text a:last-child{
-    font-size: 16px;
-    padding-left: 200px;
+.contents4-1 .notice-box ul li a{
+    position:relative;
+    display: block;
+    margin-top: 15px;
 }
 
+.contents4-1 .notice-box ul li a:before{
+    content:'';
+    display: inline-block;
+    background: #aaa;
+    margin-right: 8px;
+    width: 3px;
+    height: 3px;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+.contents4-1 .notice-box ul li:first-child a:before{
+    content: none;
+}
+
+.contents4-1 .notice-box ul li a > span{
+    position: absolute;
+    display: block;
+    right: 30px;
+    top: 3px;
+    font-size: 12px;
+}
 /*가이드 박스*/
 
 #contents-4 .guide-box{
-    width: 585px;
-    height: 300px;
-    border: 1px solid #dddddd;
+    width: 590px;
+    height: 250px;
+    border-bottom: 4px solid #683A32;
     margin-top: 5px;
-    position: relative;
+    position: relative; 
+    background: #FFD553;
+}
+
+.guide-box p{
+    margin-left: 25px;
 }
 
 #contents-4 .guide-box p:first-child{
-    margin-top: 80px;
+    padding-top: 50px;
     font-size: 20px;
     margin-bottom: 10px;
 }
@@ -417,56 +608,53 @@ body {
     font-size: 36px;
 }  
 
-#contents-4 .guide-box p{
-    margin-left: 40px;
+.map-guide p{
+    font-size: 16px;
 }
-
 #contents-4 .guide-box img{
     position: absolute;
     width: 280px;
     right: 0;
-    bottom: 0px;
+    bottom: -21px;
 }
 
 /*컨텐츠 4-2*/
 #contents-4 .contents4-2{
-    width: 585px;
-    margin-left: 30px;
+    width: 590px;
+    margin-left: 20px;
 }
 .contents4-2 h2{
     text-align: center;
     margin-bottom: 50px;
 }
 
-#contents-4 .contents4-2 .map-guide .map-guide-text-box img{
-    width: 28px;
+.contents4-2 .map-guide{
+    width: 590px;
+    height: 100px;
+    margin-left: 4px;
 }
 
-#contents-4 .contents4-2 .map-guide .map-guide-text-box:first-child img{
-    width: 22px;
-    height: 30px;
+#contents-4 .contents4-2 .map-guide .map-guide-text-box img{
+    width: 20px;
+    height: 19px;
+    margin-top: 5px;
 }
+
 #contents-4 .contents4-2 .map-guide .map-guide-text-box{
     display: flex;
-    margin-top: 10px;
 }
 
 .map-guide-text-box p{
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 
-
-
-
-
-
-
+/* footer */
 footer{
     margin-top: 120px;
     background-color: #dddddd;
-    
     height: 180px;
+    font-size: 16px;
   }
   footer .footer-logo{
     width: 202px;
@@ -507,4 +695,16 @@ footer{
   .footer-box-p p:last-child{
     margin-top: 20px;
     font-size: 14px;
+  }
+  .icon{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    
+    justify-content: flex-end;
+  }
+  .icon img{
+    width: 42px;
+    height: 42px;
+    margin-left: 22px;
   }
